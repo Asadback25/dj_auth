@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if user.is_authenticated %}
+
+    <H1>Home</H1><br>
+    <a href="{% url 'form' %}">Form</a><br>
+    <a href="{% url 'post_list_id' %}">Post Listby Id</a><br>
+    <a href="{% url 'post_list_slug' %}">Post List by Slug</a><br>
+    <form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Chiqish</button>
+    </form>
+    <a href="{% url 'profile' %}">Update Profile</a>
+
+{% else %}
+
+    <h1>Tizimga kiring</h1>
+    <a href="{% url 'login' %}">Login</a>
+
+{% endif %}
+
+</body>
+</html>
+

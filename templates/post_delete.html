@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>{{ post.title }} - ni o'chirmoqchimisiz?</p><br>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">O'chirish</button>
+</form>
+</body>
+</html>

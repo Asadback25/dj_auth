@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Post Detail by ID</h1>
+<p>{{post.title}}</p>
+<p>{{post.content}}</p>
+<br>
+<a href="{% url 'post_list_id' %}">Post List by Id</a><br>
+<a href="{% url 'post_delete_id' post.id %}">Post Delete</a><br>
+<a href="{% url 'post_update_id' post.id %}">Post Update</a>
+</body>
+</html>
